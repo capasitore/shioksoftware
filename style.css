@@ -129,6 +129,62 @@ h2 {
 .card h3 { margin: 0 0 8px; }
 .card p { margin: 0; color: var(--muted); }
 
+.product { padding-bottom: 96px; }
+
+.product .lede { margin-bottom: 32px; }
+
+.product-body {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.features strong { color: var(--fg); }
+
+.price-card p { color: var(--muted); margin: 0 0 20px; }
+
+.price-card .price {
+  color: var(--fg);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .product-body { grid-template-columns: 1fr; }
+}
+
 .contact {
   padding-top: 96px;
   padding-bottom: 96px;
